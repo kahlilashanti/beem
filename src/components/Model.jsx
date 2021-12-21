@@ -11,7 +11,7 @@ const Model = props => {
     return (
         <primitive object={model.scene}
             scale={new Array(3).fill(0.01)}
-            position={[0, 1, 0]}
+            position={[1, -.0, -3]}
         />
         // null
     )

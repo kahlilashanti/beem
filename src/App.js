@@ -21,7 +21,7 @@ function App() {
         <ambientLight intensity={0.2} />
 
         {/* <Bulb position={[0, 3, 0]} /> */}
-        <Box position={[0, .5, 0]} />
+        {/* <Box position={[0, .5, 0]} /> */}
         {/* <Floor position={[0, -0.89, 0]} /> */}
         <Orbit />
         {/* <axesHelper args={[5]} /> */}
@@ -29,7 +29,7 @@ function App() {
           <Background />
         </Suspense>
         <Suspense fallback={null}>
-          <Model path='/beem/scene.gltf' />
+          <Model path='/cards/scene.gltf' />
         </Suspense>
         <points />
       </Canvas>
