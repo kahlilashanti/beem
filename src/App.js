@@ -1,12 +1,13 @@
 import './App.css';
 import Orbit from './components/Orbit';
-import Box from './components/Box';
-import Background from './components/Background';
-import Floor from './components/Floor';
-import Bulb from './components/Bulb';
+// import Box from './components/Box';
+// import Background from './components/Background';
+// import Floor from './components/Floor';
+// import Bulb from './components/Bulb';
 import { Canvas } from 'react-three-fiber';
 import { Suspense } from 'react';
 import Model from './components/Model';
+import Lights from './components/Lights';
 
 
 function App() {
@@ -15,12 +16,9 @@ function App() {
       <Canvas
         shadowMap
         style={{ background: '#39b48e' }}
-        // camera={{ position: [3, 3, 3] }}
-        camera={{ position: [1, 5, 1] }}
+        camera={{ position: [2, 2, 2] }}
       >
-        <ambientLight intensity={0.2} />
-
-        {/* <Bulb position={[0, 3, 0]} /> */}
+        <Lights />
         {/* <Box position={[0, .5, 0]} /> */}
         {/* <Floor position={[0, -0.89, 0]} /> */}
         <Orbit />
@@ -29,7 +27,7 @@ function App() {
           <Background />
         </Suspense> */}
         <Suspense fallback={null}>
-          <Model path='/cards/scene.gltf' />
+          <Model path='/beem/scene.gltf' />
         </Suspense>
         <points />
       </Canvas>
