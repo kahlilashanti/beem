@@ -14,7 +14,7 @@ function App() {
     <div style={{ height: '100vh', width: '100vw' }}>
       <Canvas
         shadowMap
-        // style={{ background: 'black' }}
+        style={{ background: '#39b48e' }}
         // camera={{ position: [3, 3, 3] }}
         camera={{ position: [1, 5, 1] }}
       >
@@ -25,9 +25,9 @@ function App() {
         {/* <Floor position={[0, -0.89, 0]} /> */}
         <Orbit />
         {/* <axesHelper args={[5]} /> */}
-        <Suspense fallback={null}>
+        {/* <Suspense fallback={null}>
           <Background />
-        </Suspense>
+        </Suspense> */}
         <Suspense fallback={null}>
           <Model path='/cards/scene.gltf' />
         </Suspense>
